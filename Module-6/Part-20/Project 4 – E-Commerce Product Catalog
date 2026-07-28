@@ -1,0 +1,15 @@
+class Product {
+  constructor(id, name, price) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+  }
+}
+
+const products = [
+  new Product(1, "Laptop", 75000),
+
+  new Product(2, "Phone", 30000),
+];
+
+console.table(products);

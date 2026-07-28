@@ -1,0 +1,14 @@
+class Employee {
+  constructor(id, name, department, salary) {
+    this.id = id;
+    this.name = name;
+    this.department = department;
+    this.salary = salary;
+  }
+}
+
+const employees = [];
+
+employees.push(new Employee(101, "Sunny", "IT", 60000));
+
+console.table(employees);

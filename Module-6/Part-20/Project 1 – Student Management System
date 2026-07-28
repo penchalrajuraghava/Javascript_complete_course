@@ -1,0 +1,57 @@
+/*
+=========================================
+Student Management System
+=========================================
+*/
+
+class Student {
+
+    constructor(id, name, course) {
+
+        this.id = id;
+        this.name = name;
+        this.course = course;
+
+    }
+
+}
+
+class StudentManager {
+
+    constructor() {
+
+        this.students = [];
+
+    }
+
+    add(student) {
+
+        this.students.push(student);
+
+    }
+
+    remove(id) {
+
+        this.students = this.students.filter(
+
+            student => student.id !== id
+
+        );
+
+    }
+
+    display() {
+
+        console.table(this.students);
+
+    }
+
+}
+
+const manager = new StudentManager();
+
+manager.add(new Student(1, "Sunny", "MCA"));
+
+manager.add(new Student(2, "Rahul", "B.Tech"));
+
+manager.display();
